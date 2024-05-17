@@ -1,0 +1,34 @@
+{
+  "name": "mbt-shopify-demo",
+  "scripts": {
+    "pre-dev": "adastra dev -t=$SHOPIFY_DEV_THEME_ID",
+    "dev": "dotenv -- pnpm run pre-dev",
+    "adastra:build": "adastra build",
+    "adastra:preview": "adastra preview",
+    "adastra:check": "adastra check",
+    "biome-cw": "biome check --apply ./",
+    "typecheck": "tsc --build --pretty --verbose",
+    "check": "pnpm biome-ci && pnpm typecheck",
+    "test:e2e": "playwright test",
+    "test:advanded-cart": "playwright test --ui ./tests/e2e/advanced-add-to-cart.test.ts",
+    "test:basic-homepage": "playwright test --ui ./tests/e2e/basic-homepage.test.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3",
+    "@playwright/test": "1.44.0",
+    "@shopify/cli": "3.60.1",
+    "@types/node": "20.8.2",
+    "@xstate/graph": "2.0.0-beta.6",
+    "@xstate/test": "1.0.0-beta.5",
+    "adastra-cli": "0.4.0",
+    "adastra-plugin": "0.4.0",
+    "cross-env": "7.0.3",
+    "deepmerge": "4.3.1",
+    "dotenv": "16.4.5",
+    "dotenv-cli": "7.4.2",
+    "typescript": "5.3.3",
+    "vite": "5.2.11",
+    "vitest": "1.6.0",
+    "xstate": "5.5.1"
+  }
+}

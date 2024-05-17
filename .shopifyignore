@@ -1,0 +1,15 @@
+*.config.ts
+*.md
+*.yml
+tsconfig.json
+package.json
+biome.json
+.gitignore
+.github/
+.vscode/
+types/
+.env.*
+tests/
+node_modules/
+test-results
+playwright-report/
